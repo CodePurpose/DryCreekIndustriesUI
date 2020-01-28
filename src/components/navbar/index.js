@@ -10,7 +10,7 @@ export default class NavBar extends Component {
           <TitleContent>
             <Title>{title.name}</Title>
             <hr />
-            <SubTitle red>{title.subTitle}</SubTitle>
+            <SubTitle>{title.subTitle}</SubTitle>
           </TitleContent>
           <Nav>
             {links.map((link, index) => (
