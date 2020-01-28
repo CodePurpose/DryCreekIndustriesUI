@@ -33,7 +33,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   margin: 0;
-  color: ${props => (props.red ? red : "black")};
+  color: ${red};
 
   @media screen and (max-width: ${mobile}) {
     font-size: 0.9rem;
