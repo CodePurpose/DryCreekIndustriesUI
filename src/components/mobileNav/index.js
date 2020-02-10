@@ -16,7 +16,7 @@ const MobileNav = props => {
           </ul>
         </NavMobile>
       </MobileNavBody>
-      {props.open && <Backdrop />}
+      {props.open && <Backdrop click={props.click} />}
     </React.Fragment>
   );
 };

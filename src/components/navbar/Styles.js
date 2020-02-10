@@ -14,6 +14,7 @@ export const TitleContent = styled.div`
 export const HeaderContent = styled.div`
   max-width: 1440px;
   margin: auto;
+  padding: 0px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,6 +55,7 @@ export const Nav = styled.nav`
       color: black;
       font-size: 1.1rem;
       font-weight: 600;
+      transition: all 0.2s ease-out;
 
       &:hover {
         color: ${red};
@@ -67,5 +69,16 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: ${mobile}) {
     display: none;
+  }
+`;
+
+export const MenuIcon = styled.span`
+  display: none;
+  font-size: 2rem;
+  color: ${red};
+  align-self: center;
+
+  @media screen and (max-width: ${mobile}) {
+    display: block;
   }
 `;
