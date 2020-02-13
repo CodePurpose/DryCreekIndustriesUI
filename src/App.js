@@ -6,6 +6,7 @@ import NavBar from "./components/navbar";
 import HexGallery from "./components/hexGallery";
 
 import cabinets from "./images/cabinets.jpg";
+import concrete from "./images/concrete.jpg";
 import carpentryFinish from "./images/carpentryFinishWork.jpeg";
 import flooring from "./images/flooring.jpg";
 import homeMaintenace from "./images/homeMaintenance.jpg";
@@ -40,7 +41,7 @@ const rowThree = [
   { title: "Stair Cases", img: stairCases },
   { title: "Flooring", img: flooring },
   { title: "Shelving", img: shelving },
-  { title: "Concrete", img: cabinets }
+  { title: "Concrete", img: concrete }
 ];
 
 function App() {
