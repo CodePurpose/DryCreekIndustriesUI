@@ -1,59 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import Hexagon from "react-hexagon";
-
-const deskTop = "1280px";
-const tablet = "768px";
-const mobile = "480px";
-
-const GridRow = styled.div`
-  display: grid;
-  grid-template-columns: ${props =>
-    props.small ? "repeat(3, 250px)" : "repeat(4, 250px)"};
-  grid-gap: 5px 50px;
-  justify-content: center;
-  max-width: 1440px;
-  margin: ${props => (props.small ? "-30px auto" : "auto")};
-
-  @media screen and (max-width: ${deskTop}) {
-    grid-template-columns: ${props =>
-      props.small ? "repeat(3, 215px)" : "repeat(4, 215px)"};
-    grid-gap: 0px 10px;
-    ${props => props.small && "margin: -53px auto;"}
-  }
-  @media screen and (max-width: ${tablet}) {
-    grid-template-columns: ${props =>
-      props.small ? "repeat(3, 180px)" : "repeat(4, 180px)"};
-    grid-gap: 0px 5px;
-    ${props => props.small && "margin: -47px auto"}
-  }
-  @media screen and (max-width: ${mobile}) {
-    display: none;
-  }
-`;
-
-const MobileGrid = styled.div`
-  display: none;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px 5px;
-  justify-content: center;
-
-  @media screen and (max-width: ${mobile}) {
-    display: grid;
-  }
-`;
-
-const StyledSvgText = styled.text`
-  font-size: 2.5rem;
-  font-weight: 500;
-  text-anchor: middle;
-`;
+import {
+  GalleryContainer,
+  GridRow,
+  MobileGrid,
+  StyledSvgText,
+  H2
+} from "./Styles";
 
 const hexagon = (content, index) => {
   return (
     <Hexagon
       key={index}
-      style={{ stroke: "none", opacity: "0.6" }} //style doesn't work on styled-component, keeping in-line
+      style={{ stroke: "none", opacity: "0.6" }} //style doesn't work on styled-component, keeping in-line style
       backgroundScale={1.2}
       backgroundImage={content.img}
     >
@@ -102,8 +61,11 @@ const HexGallery = props => {
 
   return (
     <React.Fragment>
-      <DeskTopGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
-      <MobileGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
+      <GalleryContainer>
+        <DeskTopGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
+        <MobileGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
+      </GalleryContainer>
+      <H2>AND SO MUCH MORE!</H2>
     </React.Fragment>
   );
 };
