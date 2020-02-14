@@ -55,4 +55,5 @@ export const StyledSvgText = styled.text`
 export const H2 = styled.h2`
   margin: 0;
   padding-bottom: 1em;
+  text-align: center;
 `;

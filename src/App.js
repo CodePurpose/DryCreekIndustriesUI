@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 
 import NavBar from "./components/navbar";
 import HexGallery from "./components/hexGallery";
+import HeroBanner from "./components/heroBanner";
 
 import cabinets from "./images/cabinets.jpg";
 import concrete from "./images/concrete.jpg";
@@ -16,6 +15,7 @@ import railing from "./images/railing.jpg";
 import roughCarpentry from "./images/roughCarpentry.jpg";
 import shelving from "./images/shelving.jpg";
 import stairCases from "./images/stairCases.jpg";
+import heroBanner from "./images/heroBanner.jpg";
 
 const title = { name: "DRY CREEK INDUSTRIES", subTitle: "General Contracting" };
 
@@ -48,10 +48,7 @@ function App() {
   return (
     <div className="App">
       <NavBar links={links} title={title} />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World!</p>
-      </header>
+      <HeroBanner img={heroBanner} />
       <HexGallery rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
     </div>
   );
