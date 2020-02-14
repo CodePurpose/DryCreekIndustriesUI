@@ -3,6 +3,7 @@ import React from "react";
 import NavBar from "./components/navbar";
 import HexGallery from "./components/hexGallery";
 import HeroBanner from "./components/heroBanner";
+import RedBanner from "./components/redBanner";
 
 import cabinets from "./images/cabinets.jpg";
 import concrete from "./images/concrete.jpg";
@@ -44,13 +45,16 @@ const rowThree = [
   { title: "Concrete", img: concrete }
 ];
 
+const red = "#A5000C";
+
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <NavBar links={links} title={title} />
       <HeroBanner img={heroBanner} />
+      <RedBanner red={red} />
       <HexGallery rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
-    </div>
+    </React.Fragment>
   );
 }
 
