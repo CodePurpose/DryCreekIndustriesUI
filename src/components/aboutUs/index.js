@@ -5,7 +5,7 @@ import {
   ItemContainer,
   IconContainer,
   TextContainer
-} from "./Styled";
+} from "./Styles";
 const AboutUs = props => {
   const { content, grey } = props;
 
