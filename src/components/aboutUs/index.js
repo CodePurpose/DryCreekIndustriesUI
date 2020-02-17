@@ -9,17 +9,15 @@ import {
 
 const items = (item, index) => {
   return (
-    <React.Fragment>
-      <ItemContainer key={index}>
-        <IconContainer>
-          <i className={item.icon} />
-        </IconContainer>
-        <TextContainer>
-          <h3>{item.title}</h3>
-          <p>{item.text}</p>
-        </TextContainer>
-      </ItemContainer>
-    </React.Fragment>
+    <ItemContainer key={index}>
+      <IconContainer>
+        <i className={item.icon} />
+      </IconContainer>
+      <TextContainer>
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </TextContainer>
+    </ItemContainer>
   );
 };
 
