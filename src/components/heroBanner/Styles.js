@@ -52,4 +52,8 @@ export const Button = styled.button`
   max-width: 200px;
   font-weight: 600;
   color: white;
+
+  :hover {
+    cursor: pointer;
+  }
 `;

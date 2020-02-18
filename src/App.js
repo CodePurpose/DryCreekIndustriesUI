@@ -5,6 +5,7 @@ import HexGallery from "./components/hexGallery";
 import HeroBanner from "./components/heroBanner";
 import RedBanner from "./components/redBanner";
 import AboutUs from "./components/aboutUs";
+import Footer from "./components/footer";
 
 import cabinets from "./images/cabinets.jpg";
 import concrete from "./images/concrete.jpg";
@@ -48,7 +49,7 @@ const rowThree = [
 
 const aboutUsContent = [
   {
-    title: "YOU ARE WORKIG WITH A FRIEND",
+    title: "YOU ARE WORKING WITH A FRIEND",
     text: `When you work with us you’re not just hiring an expert, you’re hiring a friend for life. We help you take your project from dream to reality. And we don’t pressure you to build anything outside of those dreams.`,
     icon: "fas fa-people-carry"
   },
@@ -72,6 +73,11 @@ const aboutUsContent = [
   }
 ];
 
+const contactInfo = [
+  { name: "PHONE", detail: "(801)555-1212", icon: "fas fa-mobile-alt" },
+  { name: "EMAIL", detail: "JohnDoe@net.com", icon: "far fa-envelope" }
+];
+
 const red = "#A5000C";
 const grey = "#E5E5E5";
 
@@ -83,6 +89,7 @@ function App() {
       <RedBanner red={red} />
       <HexGallery rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
       <AboutUs content={aboutUsContent} grey={grey} />
+      <Footer contactInfo={contactInfo} />
     </React.Fragment>
   );
 }

@@ -12,7 +12,7 @@ const hexagon = (content, index) => {
   return (
     <Hexagon
       key={index}
-      style={{ stroke: "none", opacity: "0.6" }} //style doesn't work on styled-component, keeping in-line style
+      style={{ stroke: "none", opacity: "0.6" }} //stroke style doesn't work in styled-component, keeping in-line style
       backgroundScale={1.2}
       backgroundImage={content.img}
     >
