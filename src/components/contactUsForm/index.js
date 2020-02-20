@@ -1,93 +1,106 @@
 import React, { useState } from "react";
-import styled from "styled-components/macro";
+// import emailjs from "emailjs-com";
 
-const FormContainer = styled.div`
-  max-width: 750px;
-  max-height: 350px;
-  border: 1px solid white;
-  padding: 20px;
-`;
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledInput = styled.input`
-  padding: 10px 5px;
-  background-color: inherit;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-  margin: 10px 2px;
-`;
-
-const StyledTextArea = styled.textarea`
-  height: 100px;
-  padding: 20px;
-  border-radius: 4px;
-`;
-
-const red = "#A5000C";
-
-const Button = styled.button`
-  background-color: ${red};
-  border: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  padding: 10px 50px;
-  max-width: 200px;
-  font-weight: 600;
-  color: white;
-  align-self: center;
-
-  :hover {
-    cursor: pointer;
-  }
-`;
+import {
+  FormContainer,
+  StyledForm,
+  StyledInput,
+  StyledTextArea,
+  Button
+} from "./Styles";
 
 const ContactUsForm = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [values, setValues] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(
-      `{name: ${name}, phone: ${phone}, email: ${phone}, message: ${message}}`
-    );
+    // sendEmail();
+    console.log(values);
+    setValues({
+      name: "",
+      phone: "",
+      email: "",
+      message: ""
+    });
   };
+
+  //   const sendEmail = () => {
+  //     const sgMail = require("@sendgrid/mail");
+  //     sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
+
+  //     const msg = {
+  //       to: "em.francomartinez@gmail.com",
+  //       from: "test@example.com",
+  //       subject: "Sending with Twilio SendGrid is Fun",
+  //       text: "and easy to do anywhere, even with Node.js",
+  //       html: "<strong>and easy to do anywhere, even with Node.js</strong>"
+  //     };
+  //     sgMail.send(msg).then(resp => {
+  //       console.log(resp);
+  //     }, console.error());
+  //   };
+
+  // const sendEmail = () => {
+  //   const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  //   const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  //   const userID = process.env.REACT_APP_EMAILJS_USER_ID;
+
+  //   emailjs
+  //     .send(serviceID, templateID, values, userID)
+
+  //     .then(
+  //       result => {
+  //         console.log(result.text);
+  //       },
+  //       error => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   return (
     <FormContainer>
-      <StyledForm onSubmit={e => handleSubmit(e)}>
+      <StyledForm onSubmit={handleSubmit}>
         <div>
           <StyledInput
-            value={name}
+            name="name"
+            value={values.name}
             type="text"
-            onChange={e => setName(e.target.value)}
+            onChange={handleChange}
             required
             placeholder="Name"
           />
           <StyledInput
-            value={phone}
+            name="phone"
+            value={values.phone}
             type="tel"
-            onChange={e => setPhone(e.target.value)}
+            onChange={handleChange}
             required
             placeholder="Phone Number"
           />
           <StyledInput
-            value={email}
+            name="email"
+            value={values.email}
             type="email"
-            onChange={e => setEmail(e.target.value)}
+            onChange={handleChange}
             required
             placeholder="Email"
           />
         </div>
         <StyledTextArea
-          value={message}
-          onChange={e => setMessage(e.target.value)}
+          name="message"
+          value={values.message}
+          onChange={handleChange}
           required
           placeholder="Tell us a little about your project..."
         />

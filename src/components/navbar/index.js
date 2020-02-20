@@ -8,6 +8,7 @@ import {
   MenuIcon
 } from "./Styles";
 import MobileNav from "../mobileNav";
+import { Link } from "react-scroll";
 
 const NavBar = props => {
   const { title, links } = props;
@@ -29,7 +30,9 @@ const NavBar = props => {
           <Nav>
             {links.map((link, index) => (
               <li key={index}>
-                <a href={link.path}>{link.name}</a>
+                <Link spy={true} smooth={true} to={link.path}>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </Nav>

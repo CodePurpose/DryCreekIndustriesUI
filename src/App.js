@@ -23,10 +23,10 @@ import heroBanner from "./images/heroBanner.jpg";
 const title = { name: "DRY CREEK INDUSTRIES", subTitle: "General Contracting" };
 
 const links = [
-  { name: "Home", path: "/" },
-  { name: "Testimonials", path: "/" },
-  { name: "Gallery", path: "/" },
-  { name: "Contact Us", path: "/" }
+  { name: "Home", path: "home" },
+  // { name: "Testimonials", path: "/" },
+  { name: "Gallery", path: "gallery" },
+  { name: "Contact Us", path: "contactUs" }
 ];
 
 const rowOne = [

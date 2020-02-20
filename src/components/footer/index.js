@@ -61,7 +61,7 @@ const ContactUsTitle = styled.h1`
 const Footer = props => {
   const { contactInfo } = props;
   return (
-    <FooterBackground color={"black"}>
+    <FooterBackground id="contactUs" color={"black"}>
       <FooterContainer>
         <ContactInfoContainer>
           {contactInfo.map((info, index) => {

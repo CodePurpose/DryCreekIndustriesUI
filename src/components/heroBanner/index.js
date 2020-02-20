@@ -19,7 +19,7 @@ const HeroBanner = props => {
   const { img } = props;
   return (
     <React.Fragment>
-      <HeroImageBackground img={img}>
+      <HeroImageBackground id="home" img={img}>
         <Box />
       </HeroImageBackground>
     </React.Fragment>

@@ -61,7 +61,7 @@ const HexGallery = props => {
 
   return (
     <React.Fragment>
-      <GalleryContainer>
+      <GalleryContainer id="gallery">
         <DeskTopGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
         <MobileGallary rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
       </GalleryContainer>
