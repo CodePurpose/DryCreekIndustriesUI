@@ -5,12 +5,15 @@ import {
   InnerContainer,
   Button
 } from "./Styles";
+import { Link } from "react-scroll";
 
 const Box = () => (
   <BoarderLine>
     <InnerContainer>
       <h3>OVER 20 YEARS OF EXPERIENCE</h3>
-      <Button>Get Quote</Button>
+      <Link smooth={true} to="contactUs">
+        <Button>Get Quote</Button>
+      </Link>
     </InnerContainer>
   </BoarderLine>
 );

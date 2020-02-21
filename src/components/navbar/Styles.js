@@ -59,6 +59,7 @@ export const Nav = styled.nav`
 
       &:hover {
         color: ${red};
+        cursor: pointer;
       }
 
       @media screen and (max-width: ${tablet}) {

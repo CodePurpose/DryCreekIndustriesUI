@@ -10,12 +10,9 @@ import {
 } from "./Styles";
 
 const ContactUsForm = () => {
-  const [values, setValues] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: ""
-  });
+  const initialValues = { name: "", phone: "", email: "", message: "" };
+
+  const [values, setValues] = useState(initialValues);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -25,13 +22,8 @@ const ContactUsForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     // sendEmail();
-    console.log(values);
-    setValues({
-      name: "",
-      phone: "",
-      email: "",
-      message: ""
-    });
+    alert(values);
+    setValues(initialValues);
   };
 
   //   const sendEmail = () => {

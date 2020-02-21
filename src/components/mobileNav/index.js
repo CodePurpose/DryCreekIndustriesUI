@@ -1,6 +1,7 @@
 import React from "react";
 import { MobileNavBody, NavMobile } from "./Styles";
 import Backdrop from "../backdrop";
+import { Link } from "react-scroll";
 
 const MobileNav = props => {
   return (
@@ -10,7 +11,9 @@ const MobileNav = props => {
           <ul>
             {props.links.map((link, index) => (
               <li key={index}>
-                <a href={link.path}>{link.name}</a>
+                <Link smooth={true} to={link.path}>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>

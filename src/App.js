@@ -20,7 +20,7 @@ import shelving from "./images/shelving.jpg";
 import stairCases from "./images/stairCases.jpg";
 import heroBanner from "./images/heroBanner.jpg";
 
-const title = { name: "DRY CREEK INDUSTRIES", subTitle: "General Contracting" };
+const title = { name: "DRY CREEK INDUSTRIES", subTitle: "GENERAL CONTRACTING" };
 
 const links = [
   { name: "Home", path: "home" },

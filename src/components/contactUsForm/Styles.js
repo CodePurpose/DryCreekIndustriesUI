@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const red = "#A5000C";
+
 export const FormContainer = styled.div`
   max-width: 750px;
   max-height: 350px;
@@ -26,8 +28,6 @@ export const StyledTextArea = styled.textarea`
   padding: 20px;
   border-radius: 4px;
 `;
-
-export const red = "#A5000C";
 
 export const Button = styled.button`
   background-color: ${red};
