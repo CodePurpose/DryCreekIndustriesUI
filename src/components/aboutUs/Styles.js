@@ -1,17 +1,10 @@
 import styled from "styled-components";
+import { Container } from "../globalStyles";
 
 const mobile = "480px";
 const smallDeskTop = "1024px";
 
-export const AboutUsBackground = styled.div`
-  background-color: ${props => props.color};
-  width: 100%;
-`;
-
-export const AboutUsContainer = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 48px 16px;
+export const AboutUsContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

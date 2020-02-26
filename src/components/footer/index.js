@@ -1,31 +1,13 @@
 import React from "react";
 import {
-  FooterBackground,
   FooterContainer,
   ContactInfoContainer,
   InfoContainer,
   Info,
-  ContactUsTitle,
-  CodePurposeFooterBackground
+  ContactUsTitle
 } from "./Styles";
+import { Background } from "../globalStyles";
 import ContactUsForm from "../contactUsForm";
-
-const CodePurposeFooter = () => {
-  return (
-    <CodePurposeFooterBackground>
-      <p>
-        Made by{" "}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://codepurpose.io/"
-        >
-          CodePurpose
-        </a>
-      </p>
-    </CodePurposeFooterBackground>
-  );
-};
 
 const ContactUsFormSection = () => {
   return (
@@ -53,17 +35,14 @@ const displayContactInfo = (info, index) => {
 const Footer = props => {
   const { contactInfo } = props;
   return (
-    <React.Fragment>
-      <FooterBackground id="contactUs" color={"black"}>
-        <FooterContainer>
-          <ContactInfoContainer>
-            {contactInfo.map((info, index) => displayContactInfo(info, index))}
-          </ContactInfoContainer>
-          <ContactUsFormSection />
-        </FooterContainer>
-      </FooterBackground>
-      <CodePurposeFooter />
-    </React.Fragment>
+    <Background id="contactUs" color={"black"}>
+      <FooterContainer>
+        <ContactInfoContainer>
+          {contactInfo.map((info, index) => displayContactInfo(info, index))}
+        </ContactInfoContainer>
+        <ContactUsFormSection />
+      </FooterContainer>
+    </Background>
   );
 };
 

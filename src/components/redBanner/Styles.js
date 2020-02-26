@@ -1,17 +1,13 @@
 import styled from "styled-components";
+import { Background, Container } from "../globalStyles";
 
-export const RedBannerBackground = styled.div`
-  background-color: ${props => props.color};
-  width: 100%;
+export const RedBannerBackground = styled(Background)`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const RedBannerContent = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 48px 16px;
+export const RedBannerContent = styled(Container)`
   text-align: center;
   color: white;
 

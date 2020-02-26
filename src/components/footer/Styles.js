@@ -1,17 +1,10 @@
 import styled from "styled-components";
+import { Container } from "../globalStyles";
 
 const mobile = "480px";
 const red = "#A5000C";
 
-export const FooterBackground = styled.div`
-  background-color: ${props => props.color};
-  width: 100%;
-`;
-
-export const FooterContainer = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 48px 16px;
+export const FooterContainer = styled(Container)`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,6 +35,7 @@ padding-right: 20px;
 margin-right: 20px;
 text-align: right;
 width: 165px;
+
 > h4 {
   margin-top: 0;
 }
@@ -52,21 +46,8 @@ width: 165px;
 export const ContactUsTitle = styled.h1`
   margin-top: 0;
   text-align: center;
+
   > span {
     color: ${red};
-  }
-`;
-
-export const CodePurposeFooterBackground = styled.div`
-  background-color: #000000e3;
-  width: 100%;
-  text-align: center;
-  padding: 15px 0;
-  color: white;
-  > p {
-    margin: 0;
-    > a {
-      color: white;
-    }
   }
 `;

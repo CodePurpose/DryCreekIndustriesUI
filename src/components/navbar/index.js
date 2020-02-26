@@ -14,6 +14,7 @@ const NavBar = props => {
   const { title, links } = props;
   const [isMobileOpen, setMobileOpen] = useState(false);
 
+  //will be passed to down to MobileNav as prop to toggle state
   const toggleMobileNav = () => {
     setMobileOpen(!isMobileOpen);
   };
@@ -36,6 +37,7 @@ const NavBar = props => {
               </li>
             ))}
           </Nav>
+          {/* MenuIcon only visable for mobile screens (< 480px) */}
           <MenuIcon>
             <i className="fas fa-bars" onClick={toggleMobileNav}></i>
           </MenuIcon>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-const red = "#A5000C";
+import { RedButton } from "../globalStyles";
 
 export const FormContainer = styled.div`
   max-width: 750px;
@@ -29,18 +28,7 @@ export const StyledTextArea = styled.textarea`
   border-radius: 4px;
 `;
 
-export const Button = styled.button`
-  background-color: ${red};
-  border: none;
-  border-radius: 20px;
+export const FormButton = styled(RedButton)`
   margin-top: 20px;
-  padding: 10px 50px;
-  max-width: 200px;
-  font-weight: 600;
-  color: white;
   align-self: center;
-
-  :hover {
-    cursor: pointer;
-  }
 `;

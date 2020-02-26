@@ -4,14 +4,16 @@ import Backdrop from "../backdrop";
 import { Link } from "react-scroll";
 
 const MobileNav = props => {
+  const { click, open, links } = props;
+
   return (
     <React.Fragment>
-      <MobileNavBody open={props.open}>
+      <MobileNavBody open={open}>
         <NavMobile>
           <ul>
-            {props.links.map((link, index) => (
+            {links.map((link, index) => (
               <li key={index}>
-                <Link smooth={true} to={link.path}>
+                <Link smooth={true} to={link.path} onClick={click}>
                   {link.name}
                 </Link>
               </li>
@@ -19,7 +21,7 @@ const MobileNav = props => {
           </ul>
         </NavMobile>
       </MobileNavBody>
-      {props.open && <Backdrop click={props.click} />}
+      {open && <Backdrop click={click} />}
     </React.Fragment>
   );
 };

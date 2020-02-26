@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-// import emailjs from "emailjs-com";
 
 import {
   FormContainer,
   StyledForm,
   StyledInput,
   StyledTextArea,
-  Button
+  FormButton
 } from "./Styles";
 
 const ContactUsForm = () => {
@@ -76,7 +75,7 @@ const ContactUsForm = () => {
           required
           placeholder="Tell us a little about your project..."
         />
-        <Button type="submit">Send</Button>
+        <FormButton type="submit">Send</FormButton>
       </StyledForm>
     </FormContainer>
   );

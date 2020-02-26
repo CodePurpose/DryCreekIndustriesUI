@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const red = "#A5000C";
-
 const tablet = "768px";
 const mobile = "480px";
 

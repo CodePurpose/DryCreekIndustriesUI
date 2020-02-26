@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  AboutUsBackground,
   AboutUsContainer,
   ItemContainer,
   IconContainer,
   TextContainer
 } from "./Styles";
+import { Background } from "../globalStyles";
 
 const items = (item, index) => {
   return (
@@ -25,11 +25,11 @@ const AboutUs = props => {
   const { content, grey } = props;
 
   return (
-    <AboutUsBackground color={grey}>
+    <Background color={grey}>
       <AboutUsContainer>
         {content.map((item, index) => items(item, index))}
       </AboutUsContainer>
-    </AboutUsBackground>
+    </Background>
   );
 };
 

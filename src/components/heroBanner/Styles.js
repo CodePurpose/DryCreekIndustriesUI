@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-const red = "#A5000C";
 const mobile = "480px";
 
 export const HeroImageBackground = styled.div`
@@ -41,19 +40,5 @@ export const InnerContainer = styled.div`
       text-align: center;
       padding: 0 15px;
     }
-  }
-`;
-
-export const Button = styled.button`
-  background-color: ${red};
-  border: none;
-  border-radius: 20px;
-  padding: 10px 50px;
-  max-width: 200px;
-  font-weight: 600;
-  color: white;
-
-  :hover {
-    cursor: pointer;
   }
 `;

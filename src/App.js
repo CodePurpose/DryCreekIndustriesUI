@@ -6,6 +6,7 @@ import HeroBanner from "./components/heroBanner";
 import RedBanner from "./components/redBanner";
 import AboutUs from "./components/aboutUs";
 import Footer from "./components/footer";
+import CodePurposeFooter from "./components/codePurposeFooter";
 
 import cabinets from "./images/cabinets.jpg";
 import concrete from "./images/concrete.jpg";
@@ -90,6 +91,7 @@ function App() {
       <HexGallery rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
       <AboutUs content={aboutUsContent} grey={grey} />
       <Footer contactInfo={contactInfo} />
+      <CodePurposeFooter />
     </React.Fragment>
   );
 }
