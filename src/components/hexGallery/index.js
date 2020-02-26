@@ -45,7 +45,7 @@ const MobileGallary = props => {
   const { rowOne, rowTwo, rowThree } = props;
   const concatedRows = rowOne.concat(rowTwo, rowThree);
 
-  concatedRows.pop(); //removeing last content to make an a even 10
+  concatedRows.pop(); //removeing last content to make an a even 10, for cosmetic purpose.
 
   return (
     <React.Fragment>

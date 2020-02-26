@@ -21,44 +21,24 @@ const ContactUsForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // sendEmail();
-    alert(values);
+    sendEmail();
     setValues(initialValues);
   };
 
-  //   const sendEmail = () => {
-  //     const sgMail = require("@sendgrid/mail");
-  //     sgMail.setApiKey(process.env.REACT_APP_SENDGRID_API_KEY);
+  const sendEmail = () => {
+    const url =
+      "https://pe6m7vr3qk.execute-api.us-west-2.amazonaws.com/default/emilio-sendgrid-lamda";
 
-  //     const msg = {
-  //       to: "em.francomartinez@gmail.com",
-  //       from: "test@example.com",
-  //       subject: "Sending with Twilio SendGrid is Fun",
-  //       text: "and easy to do anywhere, even with Node.js",
-  //       html: "<strong>and easy to do anywhere, even with Node.js</strong>"
-  //     };
-  //     sgMail.send(msg).then(resp => {
-  //       console.log(resp);
-  //     }, console.error());
-  //   };
-
-  // const sendEmail = () => {
-  //   const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  //   const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  //   const userID = process.env.REACT_APP_EMAILJS_USER_ID;
-
-  //   emailjs
-  //     .send(serviceID, templateID, values, userID)
-
-  //     .then(
-  //       result => {
-  //         console.log(result.text);
-  //       },
-  //       error => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(values)
+    })
+      .then(response => console.log("Email was sent."))
+      .catch(error => console.error("Error:", error));
+  };
 
   return (
     <FormContainer>
