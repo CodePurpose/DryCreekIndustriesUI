@@ -25,7 +25,6 @@ const title = { name: "DRY CREEK INDUSTRIES", subTitle: "GENERAL CONTRACTING" };
 
 const links = [
   { name: "Home", path: "home" },
-  // { name: "Testimonials", path: "/" },
   { name: "Gallery", path: "gallery" },
   { name: "Contact Us", path: "contactUs" }
 ];
@@ -75,12 +74,14 @@ const aboutUsContent = [
 ];
 
 const contactInfo = [
-  { name: "PHONE", detail: "(801)555-1212", icon: "fas fa-mobile-alt" },
-  { name: "EMAIL", detail: "JohnDoe@net.com", icon: "far fa-envelope" }
+  { name: "PHONE", detail: "(801)822-1154", icon: "fas fa-mobile-alt" },
+  { name: "EMAIL", detail: "jc81martinez@gmail.com", icon: "far fa-envelope" }
 ];
 
+//color for background
 const red = "#A5000C";
 const grey = "#E5E5E5";
+const charcoal = "#000000e3";
 
 function App() {
   return (
@@ -91,7 +92,7 @@ function App() {
       <HexGallery rowOne={rowOne} rowTwo={rowTwo} rowThree={rowThree} />
       <AboutUs content={aboutUsContent} grey={grey} />
       <Footer contactInfo={contactInfo} />
-      <CodePurposeFooter />
+      <CodePurposeFooter charcoal={charcoal} />
     </React.Fragment>
   );
 }

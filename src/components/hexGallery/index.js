@@ -1,8 +1,9 @@
 import React from "react";
 import Hexagon from "react-hexagon";
-import { GalleryContainer, StyledSvgText, H2 } from "./Styles";
 import DeskTopGallary from "./DeskTopGallary";
 import MobileGallary from "./MobileGallary";
+import { Container } from "../globalStyles";
+import { StyledSvgText, H2 } from "./Styles";
 
 const hexagon = (content, index) => {
   return (
@@ -27,7 +28,7 @@ const HexGallery = props => {
 
   return (
     <React.Fragment>
-      <GalleryContainer id="gallery">
+      <Container id="gallery">
         <DeskTopGallary
           rowOne={rowOne}
           rowTwo={rowTwo}
@@ -35,7 +36,7 @@ const HexGallery = props => {
           hexagon={hexagon}
         />
         <MobileGallary rows={concatedRows} hexagon={hexagon} />
-      </GalleryContainer>
+      </Container>
       <H2>AND SO MUCH MORE!</H2>
     </React.Fragment>
   );

@@ -4,12 +4,6 @@ const deskTop = "1280px";
 const tablet = "768px";
 const mobile = "480px";
 
-export const GalleryContainer = styled.div`
-  max-width: 1440px;
-  margin: auto;
-  padding: 48px 16px;
-`;
-
 export const GridRow = styled.div`
   display: grid;
   grid-template-columns: ${props =>
