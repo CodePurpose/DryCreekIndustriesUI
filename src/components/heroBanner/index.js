@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { HeroImageBackground, BoarderLine, InnerContainer } from "./Styles";
 import { RedButton } from "../globalStyles";
+import heroBanner from "../../images/heroBanner.jpg";
 
 const Box = () => (
   <BoarderLine>
@@ -15,9 +16,8 @@ const Box = () => (
 );
 
 const HeroBanner = props => {
-  const { img } = props;
   return (
-    <HeroImageBackground id="home" img={img}>
+    <HeroImageBackground id="home" img={heroBanner}>
       <Box />
     </HeroImageBackground>
   );

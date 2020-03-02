@@ -35,8 +35,15 @@ const ContactUsForm = () => {
       },
       body: JSON.stringify(values)
     })
-      .then(response => console.log("Email was sent."))
-      .catch(error => console.error("Error:", error));
+      .then(response =>
+        window.alert(
+          "Thank you, your message has been successfully sent. We will contact you as soon as we review your message. "
+        )
+      )
+      .catch(error => {
+        window.alert("Oops something went wrong. Please try again later.");
+        console.error("Error:", error);
+      });
   };
 
   return (

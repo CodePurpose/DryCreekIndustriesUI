@@ -22,7 +22,8 @@ const items = (item, index) => {
 };
 
 const AboutUs = props => {
-  const { content, grey } = props;
+  const grey = "#E5E5E5";
+  const { content } = props;
 
   return (
     <Background color={grey}>

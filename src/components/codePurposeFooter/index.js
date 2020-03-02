@@ -2,7 +2,8 @@ import React from "react";
 import { CodePurposeFooterBackground } from "./Styles";
 
 const CodePurposeFooter = props => {
-  const { charcoal } = props;
+  const charcoal = "#000000e3";
+
   return (
     <CodePurposeFooterBackground color={charcoal}>
       <p>

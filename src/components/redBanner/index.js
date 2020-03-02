@@ -2,7 +2,7 @@ import React from "react";
 import { RedBannerBackground, RedBannerContent } from "./Styles";
 
 const RedBanner = props => {
-  const { red } = props;
+  const red = "#A5000C";
 
   return (
     <RedBannerBackground color={red}>
